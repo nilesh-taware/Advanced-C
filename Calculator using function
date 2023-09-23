@@ -1,0 +1,90 @@
+#include<stdio.h>
+void add(void);
+void sub(void);
+void multi(void);
+void divs(void);
+void data_input(void);
+void error_msg(void);
+void success_msg(void);
+void user_option(void);
+int num1,num2,res;
+char options;
+int main(void)
+{
+    user_option();
+    printf("\nPlease select operation:");
+    scanf("%c",&options);
+    
+    switch(options)
+    {
+        case '+':
+            add();
+            success_msg();
+            break;
+        case '-':
+            sub();
+            success_msg();
+            break;
+        case '*':
+            multi();
+            success_msg();
+            break;
+        case '/':
+            divs();
+            success_msg();
+            break;
+        default:
+            error_msg();
+            
+    }
+    
+}
+void user_option(void)
+{
+    printf("\nPress +");
+    printf("\nPress -");
+    printf("\nPress *");
+    printf("\nPress /");
+    printf("\nPress q");
+}
+void error_msg(void)
+{
+    printf("\nError in operation selection.??");
+}
+void success_msg(void)
+{
+    printf("\nSuccessfully Execuated.!!");
+}
+void data_input(void)
+{
+    printf("Please enter first number:");
+    scanf("%d",&num1);
+    printf("\nPlease enter second number:");
+    scanf("%d",&num2);
+}
+void add(void)
+{
+    
+    data_input();
+    res=num1+num2;
+    printf("\nAddition=%d",res);
+}
+void sub(void)
+{
+    data_input();
+    res=num1-num2;
+    printf("\nSubstraction=%d",res);
+}
+void multi(void)
+{
+    data_input();
+    res=num1*num2;
+    printf("\nMultiplication=%d",res);
+    
+}
+void divs(void)
+{
+    data_input();
+    res=num1/num2;
+    printf("\nDivision=%d",res);
+}
