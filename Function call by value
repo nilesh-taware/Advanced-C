@@ -1,0 +1,19 @@
+#include<stdio.h>
+int add(int,int);
+//void add(void);
+int main(void)
+{
+    int result,test;
+    result=add(50,50);
+    test=add(2,2);
+    //add();
+    printf("Addition=%d\nAddition=%d\n",result,test);
+    return 0;
+}
+int add(int x,int y)
+{
+    int res;
+    res=x+y;
+    return res;
+}
+
