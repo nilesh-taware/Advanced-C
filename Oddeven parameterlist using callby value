@@ -1,0 +1,28 @@
+/*
+ In this program, the user is asked to input 5 integers. The function `checkOddEven` takes these 5 integers as parameters and checks each one to determine if it is odd or even. The function then prints the number of odd and even numbers.
+ */
+#include <stdio.h>
+
+void checkOddEven(int a, int b, int c, int d, int e) {
+    int odd = 0, even = 0;
+
+    if (a % 2 == 0) even++; else odd++;
+    if (b % 2 == 0) even++; else odd++;
+    if (c % 2 == 0) even++; else odd++;
+    if (d % 2 == 0) even++; else odd++;
+    if (e % 2 == 0) even++; else odd++;
+
+    printf("Number of odd numbers: %d\n", odd);
+    printf("Number of even numbers: %d\n", even);
+}
+
+int main(void) {
+    int a, b, c, d, e;
+
+    printf("Enter 5 integers: ");
+    scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
+
+    checkOddEven(a, b, c, d, e);
+
+    return 0;
+}
