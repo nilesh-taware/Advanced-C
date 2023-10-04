@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str1[20], str2[20];
+    //strcpy()
+    strcpy(str1, "Hello");
+    printf("strcpy(str1, \"Hello\"): %s\n", str1);
+    //strcmp()
+    int result = strcmp(str1, "Hello");
+    if (result == 0) {
+        printf("strcmp(str1, \"Hello\"): Equal\n");
+    } else if (result < 0) {
+        printf("strcmp(str1, \"Hello\"): Less than\n");
+    } else {
+        printf("strcmp(str1, \"Hello\"): Greater than\n");
+    }
+    //strcat()
+    strcat(str1, " World");
+    printf("strcat(str1, \" World\"): %s\n", str1);
+    //strlen()
+    int len = strlen(str1);
+    printf("strlen(str1): %d\n", len);
+    //strchr()
+    char *ptr = strchr(str1, 'o');
+    if (ptr != NULL) {
+        printf("strchr(str1, 'o'): %s\n", ptr);
+    } else {
+        printf("strchr(str1, 'o'): Not found\n");
+    }
+    //strstr()
+    char *ptr2 = strstr(str1, "World");
+    if (ptr2 != NULL) {
+        printf("strstr(str1, \"World\"): %s\n", ptr2);
+    } else {
+        printf("strstr(str1, \"World\"): Not found\n");
+    }
+    return 0;
+}
