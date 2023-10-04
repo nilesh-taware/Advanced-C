@@ -1,0 +1,27 @@
+#include<stdio.h>
+int multi_function(int,int);
+int prod;
+int main(void)
+{
+    multi_function(22,5);
+    multi_function(2, 7);
+}
+int multi_function(int num1,int num2)
+{
+    for(int i=1;i<=10;i++)
+    {
+        prod=num1*i;
+        printf("%d*%d=%d\n",num1,i,prod);
+        
+    }
+    
+    printf("\nMul;tiplication Table2\n");
+    for(int i=1;i<=10;i++)
+    {
+        prod=num2*i;
+        printf("%d*%d=%d\n",num2,i,prod);
+        
+    }
+    
+    return prod;
+}
