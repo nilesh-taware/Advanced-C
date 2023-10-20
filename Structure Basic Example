@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include<string.h>
+#include<time.h>
+struct student
+{
+    int stud_rollno;
+    char stud_name[100];
+    float stud_marks;
+    
+};
+int main(void)
+{
+    time_t tm;
+        time(&tm);
+        
+    
+    struct student s1,s2,s3,s4,s5;
+    s1.stud_rollno=39;
+    strcpy(s1.stud_name, "Ankit Lilani");
+    s1.stud_marks=59.99;
+    
+    s2.stud_rollno=51;
+    strcpy(s2.stud_name, "Deep Panchal");
+    s2.stud_marks=69.99;
+    
+    s3.stud_rollno=11;
+    strcpy(s3.stud_name, "Diwakar Kumar");
+    s3.stud_marks=39.99;
+    
+    s4.stud_rollno=41;
+    strcpy(s4.stud_name, "Aniket Sawant");
+    s4.stud_marks=89.99;
+    
+    s5.stud_rollno=21;
+    strcpy(s5.stud_name, "Sameer Dangar");
+    s5.stud_marks=44.99;
+    
+    printf("----------------------------------------\n");
+    printf("\t\tSTUDENT DETAILS\t\t\n");
+    printf("  Date/Time = %s", ctime(&tm));
+    
+    printf("----------------------------------------\n");
+    printf("ROLL-NO\t");
+    printf("STUDENT-NAME\t");
+    printf("\tSTUD-MARKS\n");
+    printf("----------------------------------------\n");
+    printf("\t%d\t",s1.stud_rollno);
+    printf("%s\t",s1.stud_name);
+    printf("\t%f\n\n",s1.stud_marks);
+    
+    printf("\t%d\t",s2.stud_rollno);
+    printf("%s\t",s2.stud_name);
+    printf("\t%f\n\n",s2.stud_marks);
+    
+    printf("\t%d\t",s3.stud_rollno);
+    printf("%s\t",s3.stud_name);
+    printf("\t%f\n\n",s3.stud_marks);
+    
+    printf("\t%d\t",s4.stud_rollno);
+    printf("%s\t",s4.stud_name);
+    printf("\t%f\n\n",s4.stud_marks);
+    
+    printf("\t%d\t",s5.stud_rollno);
+    printf("%s\t",s5.stud_name);
+    printf("\t%f\n\n",s5.stud_marks);
+    
+    printf("----------------------------------------\n");
+    printf("\t\t\tThank You..!\n");
+    
+    printf("----------------------------------------\n");
+}
