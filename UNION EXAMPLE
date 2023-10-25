@@ -1,0 +1,24 @@
+//Employee union to demostrate use of union user defined data type
+#include <stdio.h>
+#include <string.h>
+
+union employee {
+    char name[50];
+    int age;
+    float salary;
+};
+
+int main(void) {
+    union employee emp;
+
+    strcpy(emp.name, "Rohit Jadhav");
+    printf("Employee Name: %s\n", emp.name);
+
+    emp.age = 25;
+    printf("Employee Age: %d\n", emp.age);
+
+    emp.salary = 5000.50;
+    printf("Employee Salary: %.2f\n", emp.salary);
+
+    return 0;
+}
