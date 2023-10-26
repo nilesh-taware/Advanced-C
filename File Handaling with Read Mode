@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+  FILE *fptr;
+    
+    
+
+  // Open a file in read mode
+  fptr = fopen("/Users/nileshtaware/Desktop/files/test.txt", "r");
+
+  // Store the content of the file
+  char myString[100];
+
+  // Read the content and store it inside myString
+  fgets(myString, 100, fptr);
+
+  // Print file content
+  printf("%s\n", myString);
+  
+  // Close the file
+  fclose(fptr);
+
+  return 0;
+}
